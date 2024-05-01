@@ -46,7 +46,7 @@ if ingredients_list:
         a = []
         a.append(fruityvice_response.json())
         st.write(a)
-        fv = pd.DataFrame(a, columns = ['nutritions'])
+        fv = pd.DataFrame(a, columns = ['nutritions']).json()
         st.write(fv)
         # fv_2=fv.drop(columns=['family'])
         fv_df_2 = st.dataframe(data=fv, use_container_width=True)
