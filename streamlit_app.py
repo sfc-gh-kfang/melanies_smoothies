@@ -51,7 +51,7 @@ if ingredients_list:
         st.write(fv_nut)
         
         # fv_2=fv.drop(columns=['family'])
-        fv_df_2 = st.dataframe(data=b, use_container_width=True)
+        fv_df_2 = st.dataframe(data=fv_nut, use_container_width=True)
         
 
     #st.write(ingredients_string)
