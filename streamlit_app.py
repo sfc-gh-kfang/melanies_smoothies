@@ -48,7 +48,7 @@ if ingredients_list:
         st.write(a)
         fv = pd.DataFrame(a)
         # fv_2=fv.drop(columns=['family'])
-        fv_2= fv.loc['nutritions']
+        fv_2= fv.iloc[5,0]
         fv_df_2 = st.dataframe(data=fv_2, use_container_width=True)
         
 
