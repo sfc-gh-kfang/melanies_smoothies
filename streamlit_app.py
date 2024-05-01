@@ -3,6 +3,7 @@ import streamlit as st
 from snowflake.snowpark.functions import col
 import requests
 import pandas as pd
+import streamlit.components.v1 as components
 
 # Write directly to the app
 st.title(":cup_with_straw: Customize Your Smoothie :cup_with_straw:")
@@ -52,6 +53,7 @@ if ingredients_list:
         
        # st.write(fv)
         st.write(fvv)
+        components.html(fvv.to_html(header=False))
        # st.write(pd.json_normalize(a["nutritions"]))
        # fv_nut = pd.json_normalize(fv["labels"])
        # st.write(fv_nut)
