@@ -43,7 +43,7 @@ if ingredients_list:
         st.subheader(fruit_chosen + ' Nurition Information')
         fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + search_on)
         
-        # a = []
+        a = []
         a.append(fruityvice_response.json())
         # st.write(a)
         fv = pd.DataFrame(a, columns = ['nutritions'])
