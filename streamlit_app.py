@@ -43,21 +43,21 @@ if ingredients_list:
         st.subheader(fruit_chosen + ' Nurition Information')
         fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + search_on)
         
-        a = []
-        a.append(fruityvice_response.json())
-        st.write(fruityvice_response.json())
-        st.write(a)
-        fv = pd.DataFrame(a, columns = ['nutritions'])
+       # a = []
+       # a.append(fruityvice_response.json())
+       # st.write(fruityvice_response.json())
+       # st.write(a)
+       # fv = pd.DataFrame(a, columns = ['nutritions'])
         fvv = pd.DataFrame(fruityvice_response.json(), columns = ['nutritions'])
         
-        st.write(fv)
+       # st.write(fv)
         st.write(fvv)
-        st.write(pd.json_normalize(a["nutritions"]))
-        fv_nut = pd.json_normalize(fv["labels"])
-        st.write(fv_nut)
+       # st.write(pd.json_normalize(a["nutritions"]))
+       # fv_nut = pd.json_normalize(fv["labels"])
+       # st.write(fv_nut)
         
-        # fv_2=fv.drop(columns=['family'])
-        fv_df_2 = st.dataframe(data=fv_nut, use_container_width=True)
+       # fv_2=fv.drop(columns=['family'])
+       # fv_df_2 = st.dataframe(data=fv_nut, use_container_width=True)
         
 
     #st.write(ingredients_string)
