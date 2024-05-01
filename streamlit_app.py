@@ -48,7 +48,10 @@ if ingredients_list:
         st.write(fruityvice_response.json())
         st.write(a)
         fv = pd.DataFrame(a, columns = ['nutritions'])
+        fvv = pd.DataFrame(fruityvice_response.json(), columns = ['nutritions'])
+        
         st.write(fv)
+        st.write(fvv)
         st.write(pd.json_normalize(a["nutritions"]))
         fv_nut = pd.json_normalize(fv["labels"])
         st.write(fv_nut)
