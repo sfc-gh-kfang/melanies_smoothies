@@ -48,7 +48,7 @@ if ingredients_list:
         # st.write(a)
         fv = pd.DataFrame(a, columns = ['nutritions'])
         st.write(fv)
-        fv_nut = pd.json_normalize(fv)
+        fv_nut = pd.json_normalize(fv["labels"])
         st.write(fv_nut)
         
         # fv_2=fv.drop(columns=['family'])
